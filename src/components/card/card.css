@@ -1,0 +1,8 @@
+.weather-card {
+    display: block;
+    background-color: slategray;
+    border-radius: 12px;
+    margin: 5% 12%;
+    box-shadow: 12px 12px 30px black;
+    padding: 5%;
+}
