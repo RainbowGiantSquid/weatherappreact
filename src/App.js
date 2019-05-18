@@ -75,7 +75,11 @@ class App extends React.Component {
             />
           </Form>
           {this.state.weatherData && (
-            <Card city={this.state.city} weatherData={this.state.weatherData} />
+            <Card
+              city={this.state.city}
+              weatherData={this.state.weatherData}
+              units={this.state.units}
+            />
           )}
           {this.state.error && <p>Oh no! Something went wrong...</p>}
         </header>
