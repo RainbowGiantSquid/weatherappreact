@@ -10,11 +10,12 @@ class App extends React.Component {
   state = {
     city: "",
     loading: false,
-    error: null
+    error: null,
+    units: "metric"
   };
   onChange = event => {
     this.setState({
-      [event.target.id]: event.target.value
+      [event.target.name || event.target.id]: event.target.value
     });
   };
   onSubmit = event => {
@@ -49,6 +50,24 @@ class App extends React.Component {
               value={this.state.city}
               placeholder="type a city"
               id="city"
+            />
+            <Input
+              onChange={this.onChange}
+              checked={this.state.units === "metric"}
+              type="radio"
+              name="units"
+              value="metric"
+              label="metric"
+              id="metric"
+            />
+            <Input
+              onChange={this.onChange}
+              checked={this.state.units === "imperial"}
+              type="radio"
+              name="units"
+              value="imperial"
+              label="imperial"
+              id="imperial"
             />
             <Input
               disabled={this.state.loading || !this.state.city}
