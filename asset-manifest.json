@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/weatheappreact/static/css/main.2aac2ae6.chunk.css",
+    "main.js": "/weatheappreact/static/js/main.a094ef89.chunk.js",
+    "main.js.map": "/weatheappreact/static/js/main.a094ef89.chunk.js.map",
+    "runtime~main.js": "/weatheappreact/static/js/runtime~main.92541fd4.js",
+    "runtime~main.js.map": "/weatheappreact/static/js/runtime~main.92541fd4.js.map",
+    "static/js/2.599af31d.chunk.js": "/weatheappreact/static/js/2.599af31d.chunk.js",
+    "static/js/2.599af31d.chunk.js.map": "/weatheappreact/static/js/2.599af31d.chunk.js.map",
+    "index.html": "/weatheappreact/index.html",
+    "precache-manifest.f0c11b8afa87367389383e1f730da421.js": "/weatheappreact/precache-manifest.f0c11b8afa87367389383e1f730da421.js",
+    "service-worker.js": "/weatheappreact/service-worker.js",
+    "static/css/main.2aac2ae6.chunk.css.map": "/weatheappreact/static/css/main.2aac2ae6.chunk.css.map",
+    "static/media/logo.svg": "/weatheappreact/static/media/logo.5d5d9eef.svg"
+  }
+}
