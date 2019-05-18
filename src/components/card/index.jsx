@@ -8,7 +8,15 @@ const Card = props => (
       {Math.round(props.weatherData.main.temp)}{" "}
       {props.units === "metric" ? "ºC" : "F"}
     </p>
-    <p>{props.weatherData.weather[0].description}</p>
+    <p>
+      <img
+        src={`http://openweathermap.org/img/w/${
+          props.weatherData.weather[0].icon
+        }.png`}
+        alt={props.weatherData.weather[0].description}
+      />
+      {props.weatherData.weather[0].description}
+    </p>
   </div>
 );
 
