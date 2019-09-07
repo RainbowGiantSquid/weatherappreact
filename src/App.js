@@ -11,7 +11,9 @@ class App extends React.Component {
     city: "",
     loading: false,
     error: null,
-    units: "metric"
+    units: "metric",
+    currentCity: true,
+    currentUnits: true
   };
   onChange = event => {
     this.setState({
@@ -20,7 +22,6 @@ class App extends React.Component {
   };
   onSubmit = event => {
     event.preventDefault();
-    console.log("searching for...", this.state.city);
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${
         this.state.city
@@ -35,8 +36,14 @@ class App extends React.Component {
         return response.json();
       })
       .then(json => {
-        this.setState({ weatherData: json, loading: false });
-      });
+        this.setState({
+          weatherData: json,
+          loading: false,
+          currentUnits: this.state.units,
+          currentCity: this.state.city
+        });
+      })
+      .catch(error => this.setState({ error }));
   };
 
   render() {
@@ -76,9 +83,9 @@ class App extends React.Component {
           </Form>
           {this.state.weatherData && (
             <Card
-              city={this.state.city}
+              city={this.state.currentCity}
               weatherData={this.state.weatherData}
-              units={this.state.units}
+              units={this.state.currentUnits}
             />
           )}
           {this.state.error && <p>Oh no! Something went wrong...</p>}
